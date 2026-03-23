@@ -20,8 +20,8 @@ public class FornecedorController {
     FornecedorService fornecedorService;
 
     @PostMapping
-    public ResponseEntity<FornecedorModel> create(FornecedorModel fornecedorModel){
-        FornecedorModel request = fornecedorService.create(fornecedorModel);
+    public ResponseEntity<FornecedorModel> createFornecedor(@RequestBody FornecedorModel fornecedorModel){
+        FornecedorModel request = fornecedorService.createFornecedor(fornecedorModel);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(fornecedorModel.getId()).toUri();
         return ResponseEntity.created(uri).body(request);

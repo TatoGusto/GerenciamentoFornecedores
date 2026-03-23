@@ -12,7 +12,7 @@ public class FornecedorService {
     @Autowired
     FornecedorRepository fornecedorRepository;
 
-    public FornecedorModel create(FornecedorModel fornecedorModel){
+    public FornecedorModel createFornecedor(FornecedorModel fornecedorModel){
         return fornecedorRepository.save(fornecedorModel);
     }
 
